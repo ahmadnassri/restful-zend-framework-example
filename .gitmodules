@@ -1,0 +1,6 @@
+[submodule "library/REST"]
+	path = library/REST
+	url = git://github.com/codeinchaos/restful-zend-framework.git
+[submodule "library/Zend"]
+	path = library/Zend
+	url = git://github.com/codeinchaos/zend-framework.git
