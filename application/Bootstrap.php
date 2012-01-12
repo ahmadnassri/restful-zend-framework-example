@@ -7,6 +7,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         // set custom request object
         $frontController->setRequest(new REST_Controller_Request_Http);
+        $frontController->setResponse(new REST_Response);
 
         // add the REST route for the API module only
         $restRoute = new Zend_Rest_Route($frontController, array(), array('api'));
