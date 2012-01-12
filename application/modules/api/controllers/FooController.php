@@ -11,7 +11,7 @@ class Api_FooController extends REST_Controller
     public function indexAction()
     {
         $this->view->message = 'indexAction has been called.';
-        $this->getResponse()->setHttpResponseCode(200);
+        $this->_response->ok();
     }
 
     /**
@@ -22,7 +22,7 @@ class Api_FooController extends REST_Controller
     public function headAction()
     {
         $this->view->message = 'headAction has been called';
-        $this->getResponse()->setHttpResponseCode(200);
+        $this->_response->ok();
     }
 
     /**
@@ -36,7 +36,7 @@ class Api_FooController extends REST_Controller
 
         $this->view->id = $id;
         $this->view->message = sprintf('Resource #%s', $id);
-        $this->getResponse()->setHttpResponseCode(200);
+        $this->_response->ok();
     }
 
     /**
@@ -47,7 +47,7 @@ class Api_FooController extends REST_Controller
     {
         $this->view->params = $this->_request->getParams();
         $this->view->message = 'Resource Created';
-        $this->getResponse()->setHttpResponseCode(201);
+        $this->_response->created();
     }
 
     /**
@@ -62,7 +62,7 @@ class Api_FooController extends REST_Controller
         $this->view->id = $id;
         $this->view->params = $this->_request->getParams();
         $this->view->message = sprintf('Resource #%s Updated', $id);
-        $this->getResponse()->setHttpResponseCode(201);
+        $this->_response->ok();
     }
 
     /**
@@ -76,6 +76,6 @@ class Api_FooController extends REST_Controller
 
         $this->view->id = $id;
         $this->view->message = sprintf('Resource #%s Deleted', $id);
-        $this->getResponse()->setHttpResponseCode(200);
+        $this->_response->ok();
     }
 }
